@@ -2,6 +2,7 @@ import { call, select, all, put, takeEvery } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 
 import api from '../../../services/api';
+import history from '../../../services/history';
 
 import { formatPrice } from '../../../util/format';
 
@@ -37,6 +38,7 @@ function* addToCart({ id }) {
     };
 
     yield put(addToCartSuccess(data));
+    history.push('/cart');
   }
 }
 
@@ -52,6 +54,7 @@ function* updateAmount({ id, amount }) {
   }
 
   yield put(updateAmountSuccess(id, amount));
+  history.push('/cart');
 }
 
 export default all([

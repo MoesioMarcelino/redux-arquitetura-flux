@@ -54,7 +54,6 @@ function* updateAmount({ id, amount }) {
   }
 
   yield put(updateAmountSuccess(id, amount));
-  history.push('/cart');
 }
 
 export default all([

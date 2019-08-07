@@ -27,6 +27,16 @@ export const Container = styled.div`
       }
     }
   }
+
+  strong {
+    font-size: 15px;
+    color: #000;
+    font-style: 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const ProductTable = styled.table`
